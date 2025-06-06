@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Parking System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #f9fafc;
+      color: #333;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    pre {
+      background: #eee;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">&larr; Back to Projects</a>
+  <h1>Smart Parking System</h1>
+  <p>
+    An IoT-based system that detects car entry and exit using sensors and logs the data into Google Sheets.
+    It uses RFID, NodeMCU, and Google Apps Script for real-time monitoring and notifications.
+  </p>
+  <img src="https://via.placeholder.com/600x350?text=Smart+Parking+System" alt="Smart Parking System Image" />
+  <h2>Sample Arduino Code Snippet</h2>
+  <pre>
+// Detect vehicle entry and send UID
+if (vehicleDetected()) {
+  String uid = readRFID();
+  Serial.println("ENTRY:" + uid + ":" + availableSlots + ":" + assignedSlot);
+  openGate();
+}
+  </pre>
+</body>
+</html>
